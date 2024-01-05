@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Interactive Resume</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p>Experienced [Your Profession] with a passion for [What Motivates You].</p>
+        </header>
+
+        <section id="roboticsSection">
+            <h2>Robotics</h2>
+            <ul>
+                <li>Robotic Systems Design</li>
+                <li>Programming Robots in C++</li>
+                <li>Team Collaboration in Robotics Competitions</li>
+            </ul>
+            <div class="navigation">
+                <div class="back" onclick="toggleSections('roboticsSection', 'computerSection')">Back</div>
+                <div class="forward" onclick="toggleSections('roboticsSection', 'educationSection')">Forward</div>
+            </div>
+        </section>
+
+        <section id="computerSection" style="display: none;">
+            <h2>Computer</h2>
+            <ul>
+                <li>Full Stack Web Development</li>
+                <li>Java Application Development</li>
+                <li>Database Management with SQL</li>
+            </ul>
+            <div class="navigation">
+                <div class="back" onclick="toggleSections('computerSection', 'roboticsSection')">Back</div>
+                <div class="forward" onclick="toggleSections('computerSection', 'educationSection')">Forward</div>
+            </div>
+        </section>
+
+        <section id="educationSection" style="display: none;">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>[University Name]</strong>, [Degree Earned], Graduation Date: [Month Year]</li>
+                <li>Relevant Courses: [Course 1, Course 2]</li>
+            </ul>
+            <div class="navigation">
+                <div class="back" onclick="toggleSections('educationSection', 'computerSection')">Back</div>
+                <div class="forward" onclick="toggleSections('educationSection', 'achievementsSection')">Forward</div>
+            </div>
+        </section>
+
+        <section id="achievementsSection" style="display: none;">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Recipient of [Award Name] in [Year]</li>
+                <li>Published Paper in [Journal/Conference]</li>
+                <li>Recognized for [Notable Accomplishment]</li>
+            </ul>
+            <div class="navigation">
+                <div class="back" onclick="toggleSections('achievementsSection', 'educationSection')">Back</div>
+            </div>
+        </section>
+
+        <!-- Add more sections as needed -->
+
+    </div>
+
+    <script>
+        function toggleSections(hideSectionId, showSectionId) {
+            var hideSection = document.getElementById(hideSectionId);
+            var showSection = document.getElementById(showSectionId);
+
+            hideSection.style.display = 'none';
+            showSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
